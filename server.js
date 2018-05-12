@@ -33,16 +33,16 @@ app.use((req,res,next)=>{
 
 });
 
-app.use((req,res,next)=>{
+// app.use((req,res,next)=>{
 
-res.render('Maintanance.hbs', {
-    title:'Error page'
-    ,header:'Page is unavailable'
-    ,content:'thanks for visiting  the home page'
-    ,author:'indrajeet mishra'
-})
+// res.render('Maintanance.hbs', {
+//     title:'Error page'
+//     ,header:'Page is unavailable'
+//     ,content:'thanks for visiting  the home page'
+//     ,author:'indrajeet mishra'
+// })
 
-});
+// });
 
 app.get('/',(req,res)=>{
     
@@ -72,5 +72,23 @@ app.get('/about',(req,res)=>{
                         )
                     }
                 );
+
+                app.get('/portfolio',(req,res)=>{
+                    res.render('portfolio.hbs', 
+                               {
+                                   title:'portfolio page'
+                                   ,header:'welcome to the portfolio page'
+                                   ,content:'thanks for visiting me'
+                                   ,author:'indrajeet mishra'
+                                   //,currentDate:new Date().getFullYear()
+                                  }
+                              )
+                          }
+                      );
+      
+
+
+
+
 
 app.listen(port,()=>{console.log(`server is runing on port ${port}`)});
