@@ -46,7 +46,7 @@ app.use((req,res,next)=>{
 
 app.get('/',(req,res)=>{
     
-    res.render('about.hbs',
+    res.render('home.hbs',
                {
                    title:'home page'
                    ,header:'welcome to the home page'
